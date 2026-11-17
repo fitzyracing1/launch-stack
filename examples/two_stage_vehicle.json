@@ -1,0 +1,22 @@
+{
+  "name": "two-stage light-lift (educational)",
+  "payload_mass_kg": 500,
+  "cd": 0.3,
+  "ref_area_m2": 3.2,
+  "stages": [
+    {
+      "name": "first stage",
+      "dry_mass_kg": 8000,
+      "propellant_mass_kg": 42000,
+      "thrust_n": 1200000,
+      "isp_s": 280
+    },
+    {
+      "name": "second stage",
+      "dry_mass_kg": 2000,
+      "propellant_mass_kg": 12000,
+      "thrust_n": 250000,
+      "isp_s": 320
+    }
+  ]
+}

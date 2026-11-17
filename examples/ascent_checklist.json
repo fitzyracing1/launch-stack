@@ -1,0 +1,30 @@
+{
+  "schema": "launch-stack-checklist/v0.1",
+  "name": "ascent go/no-go (educational)",
+  "gates": [
+    {
+      "id": "liftoff",
+      "label": "Lift off with thrust greater than weight",
+      "when": { "event": "liftoff" },
+      "require": { "thrust_to_weight": { ">=": 1.0 }, "alt_m": { ">=": 0 } }
+    },
+    {
+      "id": "max_q",
+      "label": "Keep peak dynamic pressure under a conservative demo limit",
+      "when": { "event": "max_q" },
+      "require": { "dynamic_pressure_pa": { "<=": 80000 } }
+    },
+    {
+      "id": "staging",
+      "label": "First stage should separate above 20 km in this demo",
+      "when": { "event": "staging", "stage": 2 },
+      "require": { "alt_m": { ">=": 20000 } }
+    },
+    {
+      "id": "apogee",
+      "label": "Reach an apogee of at least 100 km in this demo",
+      "when": { "event": "apogee" },
+      "require": { "alt_m": { ">=": 100000 } }
+    }
+  ]
+}
